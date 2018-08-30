@@ -1,0 +1,38 @@
+1. Models
+2. Database
+3. APIs
+
+public class Student
+{
+    public string Id {get;set;}                 S01
+    public string Name {get;set;}               "myName"
+    public int Score {get;set;}
+}
+
+public class Teacher 
+{
+    public string Id {get; set;}                 001
+    public string Name {get;set;}               "myTeacher"
+    public string Tech {get;set;}
+} 
+
+public class Room
+{
+    public string _id;
+    public string Id {
+        get { return _id; }
+        set 
+        {
+            if(value != _id)
+            {
+                value += "myDemo";
+                _id = value;
+            }   
+        }
+    }
+
+    public string Number {get;set;}             101
+
+    public List<string> TeacherIds {get;set;}    001
+    public List<string> StudentIds {get;set;}    S01 S02 S03
+}
